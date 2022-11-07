@@ -40,21 +40,22 @@ for (const key in team) {
     console.log(team[key]);
 }
 
-for (let i = 1; i < 3; i++) {
+for (let i = 0; i < 2; i++) {
 
     for (let key in team) {
         let li = document.createElement("li");  
 
-        if (i === 1) { 
+        if (i === 0) { 
             li.innerHTML = team[key].name;
             document.querySelector('#team-names').appendChild(li);
         }
-        else if (i === 2) {
+        else if (i === 1) {
             li.innerHTML = team[key].position;
             document.querySelector('#team-positions').appendChild(li);
         }
     }  
 }
+
 for (let i = 0; i < team.length; i++) {
     let img = document.createElement('img');
     img.src = `img/${team[i].image}`;
