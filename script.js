@@ -36,7 +36,9 @@ const team = [
     }
 ]
 
-
+for (const key in team) {
+    console.log(team[key]);
+}
 
 for (let i = 0; i < 3; i++) {
     let nameUl = document.getElementById('team-names');
@@ -45,8 +47,7 @@ for (let i = 0; i < 3; i++) {
 
     for (let key in team) {
         let li = document.createElement("li");  
-        console.log(team[key]);
-        
+
         if (i === 0) { 
             li.innerHTML = team[key].name;
             nameUl.appendChild(li);
