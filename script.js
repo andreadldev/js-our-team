@@ -40,25 +40,25 @@ for (const key in team) {
     console.log(team[key]);
 }
 
-for (let i = 0; i < 3; i++) {
-    let nameUl = document.getElementById('team-names');
-    let positionsUl = document.getElementById('team-positions');
-    let imagesUl = document.getElementById('team-images');
+for (let i = 1; i < 3; i++) {
 
     for (let key in team) {
         let li = document.createElement("li");  
 
-        if (i === 0) { 
+        if (i === 1) { 
             li.innerHTML = team[key].name;
-            nameUl.appendChild(li);
-        }
-        else if (i === 1) {
-            li.innerHTML = team[key].position;
-            positionsUl.appendChild(li);
+            document.querySelector('#team-names').appendChild(li);
         }
         else if (i === 2) {
-            li.innerHTML = team[key].image;
-            imagesUl.appendChild(li);
+            li.innerHTML = team[key].position;
+            document.querySelector('#team-positions').appendChild(li);
         }
-    }
+    }  
+}
+for (let i = 0; i < team.length; i++) {
+    let img = document.createElement('img');
+    img.src = `img/${team[i].image}`;
+    img.height = 200;
+    img.style.margin = "0 5px"; 
+    document.querySelector('#team-images').appendChild(img);
 }
