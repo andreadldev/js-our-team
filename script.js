@@ -48,7 +48,7 @@ for (let i = 0; i < 3; i++) {
             li.innerHTML = team[key].name;
             nameUl.appendChild(li);
         }
-        if (i === 1) {
+        else if (i === 1) {
             li.innerHTML = team[key].position;
             positionsUl.appendChild(li);
         }
